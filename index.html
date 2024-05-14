@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stegonography Image App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Keania+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <h1>Stegonography Image App</h1>
+        </li>
+        <li><a href="#">Sender</a></li>
+        <li><a href="receiver.html">Receiver</a></li>
+      </ul>
+    </nav>
+    <main>
+      <form method="post" enctype="multipart/form-data" id="form-encode">
+        <h1>Encrypt</h1>
+        <div class="container-form">
+          <div class="form">
+            <div class="form-input">
+              <div class="form-group">
+                <label for="image">Original Image</label>
+                <input type="file" id="image-upload" name="image" accept="image" required />
+              </div>
+              <div class="form-group">
+                <label for="key">Masukan Kunci</label>
+                <input type="text" id="key" name="key" required autocomplete="off" />
+              </div>
+            </div>
+            <div class="btn-group">
+              <button type="submit" class="btn-process">Process</button>
+              <button type="reset" class="btn-clear" onclick="resetHandler()">Reset</button>
+            </div>
+          </div>
+          <div class="pesan">
+            <label for="pesan">Masukan Teks Pesan</label>
+            <textarea name="pesan" id="pesan"></textarea>
+          </div>
+        </div>
+        <div class="image-preview">
+          <label for="image-preview">Image Preview</label>
+          <div class="preview">
+            <div class="img" onclick="download()">
+              <img src="" alt="" id="image-preview" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+
+</html>
